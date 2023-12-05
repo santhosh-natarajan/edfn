@@ -257,7 +257,10 @@ h6 {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
 }
 
 .navbar ul {
