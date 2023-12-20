@@ -1,5 +1,5 @@
 /**
-* Template Name: Imperial
+* Template Name: EDFN Technologies
 * Updated: Jul 27 2023 with Bootstrap v5.3.1
 * Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
 * Author: BootstrapMade.com
@@ -9,22 +9,26 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
-  background: #fff;
-  color: #666666;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  
+  color: #ffffffff;
   font-family: "Open Sans", sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #03C4EB;
+  color: #18d26e;
   transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #03c5ec;
+  color: #18d26e;
   outline: none;
   text-decoration: none;
 }
@@ -49,8 +53,10 @@ h6 {
 /* Prelaoder */
 #preloader {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 999;
   width: 100%;
   height: 100%;
@@ -68,7 +74,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #03C4EB;
+  background: #18d26e;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -78,11 +84,11 @@ h6 {
 .back-to-top i {
   font-size: 28px;
   color: #fff;
-  line-height: 0;
+  line-height: 1.5;
 }
 
 .back-to-top:hover {
-  background: #1bd6fc;
+  background: #18d26e;
   color: #fff;
 }
 
@@ -92,14 +98,57 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+#topbar {
+  height: 40px;
+  font-size: 14px;
+  transition: all 0.5s;
+  z-index: 996;
+}
+#topbar.topbar-scrolled {
+  top: -40px;
+}
+#topbar .contact-info i {
+  font-style: normal;
+  color: #d9ba85;
+}
+#topbar .contact-info i span {
+  padding-left: 5px;
+  color: #fff;
+}
+#topbar .languages ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #cda45e;
+}
+#topbar .languages ul a {
+  color: white;
+}
+#topbar .languages ul li + li {
+  padding-left: 10px;
+}
+#topbar .languages ul li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  content: "/";
+}
+
+/*--------------------------------------------------------------
 # Welcome
 --------------------------------------------------------------*/
+
+
 #hero {
   display: table;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: url(../img/hero-bg.jpg) top center;
-  background-size: cover;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url(https://i.pinimg.com/originals/02/4d/76/024d76c3c08ec2c32181e9a5d0f3cb48.jpg);
+  opacity: 1;
 }
 
 @media (min-width: 1024px) {
@@ -109,15 +158,17 @@ h6 {
 }
 
 #hero .hero-logo {
-  margin: 20px;
+  margin-right: 75%;
+  filter: invert(63%) sepia(80%) saturate(483%) hue-rotate(91deg) brightness(90%) contrast(89%);
 }
 
 #hero .hero-logo img {
-  max-width: 100%;
+  width: 450px;
+  color: #32cd32 ;
 }
 
 #hero .hero-container {
-  background: rgba(0, 0, 0, 0.8);
+ 
   display: table-cell;
   margin: 0;
   padding: 0;
@@ -130,7 +181,9 @@ h6 {
   font-weight: 700;
   line-height: 48px;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffffff;
+  -webkit-text-stroke-color: invert(63%) sepia(80%) saturate(483%) hue-rotate(91deg) brightness(90%) contrast(89%);;
+  
 }
 
 @media (max-width: 768px) {
@@ -141,14 +194,14 @@ h6 {
 }
 
 #hero h2 {
-  color: #ccc;
+  color: whitesmoke;
   margin-bottom: 50px;
 }
 
 #hero h2 span {
   color: #fff;
   transition: 0.3s;
-  border-bottom: 2px solid #03C4EB;
+  border-bottom: 2px solid #18d26e;
 }
 
 @media (max-width: 768px) {
@@ -181,8 +234,8 @@ h6 {
 }
 
 #hero .btn-get-started {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
+  background: #18d26e;
+  border: 2px solid #18d26e;
   color: #fff;
 }
 
@@ -198,14 +251,62 @@ h6 {
 }
 
 #hero .btn-services:hover {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
+  background: #18d26e;
+  border: 2px solid #18d26e;
+}
+
+/*--------------------------------------------------------------
+# column
+--------------------------------------------------------------*/
+
+.box {
+  margin: 4%;
+  margin-top: 5%;
+  padding: 30px;
+  display: flex;
+  border-radius: 70px;
+  background-color: #413f3f;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.box-col::after {
+  content: '';
+  width: 10px;
+  height: 99px;
+ display: block;
+ border-radius: 70px;
+ background-color:#18d26e;
+ position: absolute;
+ left: -19px;
+ top: -12px;
+}
+.box-col {
+  display: flex;
+  height: 75px;
+  text-align: left;
+  color: #ffffff;
+  position: relative;
 }
 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/IMG_3542.html.JPG);
+}
+
 #header {
+  
   background: #0d0d0d;
   transition: all 0.5s;
   z-index: 997;
@@ -219,11 +320,15 @@ h6 {
 }
 
 #header.fixed-top {
+  top: 0;
   background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid #030303;
+  
 }
 
 #header .logo {
   font-size: 30px;
+  filter: invert(63%) sepia(80%) saturate(483%) hue-rotate(91deg) brightness(90%) contrast(89%);
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -237,11 +342,11 @@ h6 {
 }
 
 #header .logo img {
-  height: 50px;
+ max-height: 175px;
 }
 
 .scrolled-offset {
-  margin-top: 70px;
+  margin-top: 170px;
 }
 
 @media (max-width: 992px) {
@@ -256,22 +361,26 @@ h6 {
 /**
 * Desktop Navigation 
 */
-.navbar {
-  width: 85%;
-  margin: auto;
+
+.navbar {  
+  float: right;
   padding: 35px 0;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.navbar ul {
-  margin: 0;
+.navbar ul  {
+ float: right;
   padding: 0;
   display: flex;
   list-style: none;
   align-items: center;
 }
 
+
 .navbar li {
+  
   position: relative;
 }
 
@@ -299,7 +408,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 .navbar .dropdown ul {
@@ -334,7 +443,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 .navbar .dropdown:hover>ul {
@@ -429,7 +538,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 .navbar-mobile .getstarted,
@@ -464,7 +573,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -482,7 +591,7 @@ section {
 
 .section-title {
   font-size: 32px;
-  color: #111;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -496,7 +605,7 @@ section {
 .section-title-divider {
   width: 50px;
   height: 3px;
-  background: #03C4EB;
+  background: #18d26e;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -504,42 +613,37 @@ section {
 /* Get Started Section
 --------------------------------*/
 #about {
-  background: #fff;
-  padding: 80px 0;
-}
-
-#about .about-img {
-  overflow: hidden;
-}
-
-#about .about-img img {
-  max-width: 100%;
-}
-
-@media (max-width: 768px) {
-  #about .about-img {
-    height: auto;
-  }
-
-  #about .about-img img {
-    margin-left: 0;
-    padding-bottom: 30px;
-  }
+  margin-top: 0%;
+  height: 1.5;
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://wallpapercave.com/wp/wp2701769.jpg);
+  background-size: cover;
+  padding: 80px 0 60px 0;
 }
 
 #about .about-content {
-  background: #fff;
+    background: #000000;
 }
 
 #about .about-title {
-  color: #333;
+  color: #fffefe;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 28px; 
+  position: static;
+  display: grid;
+  height: auto;
+  width: 100%;
+  min-height: auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+}
+
+#about .about-text.h4 {
+  justify-content: center;
 }
 
 #about .about-text {
   line-height: 26px;
-  margin-bottom: 15px;
+  margin-bottom: 15px; 
 }
 
 #about .about-text:last-child {
@@ -549,7 +653,7 @@ section {
 /* Services Section
 --------------------------------*/
 #services {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/services-bg.jpg") fixed center center;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(https://img.freepik.com/premium-photo/closeup-macro-shot-circuit-cyberspace-board-with-computer-motherboard-component-microchip-with-chip-structure-neural-network-generated-art-based-any-actual-scene-pattern_479694-6349.jpg);
   background-size: cover;
   padding: 80px 0 60px 0;
 }
@@ -560,10 +664,10 @@ section {
 
 #services .service-icon {
   float: left;
-  background: #03C4EB;
+  background: #18d26e;
   border-radius: 50%;
   transition: 0.5s;
-  border: 1px solid #03C4EB;
+  border: 1px solid #18d26e;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -582,7 +686,7 @@ section {
 }
 
 #services .service-item:hover .service-icon i {
-  color: #03C4EB;
+  color:#18d26e  ;
 }
 
 #services .service-title {
@@ -593,7 +697,7 @@ section {
 }
 
 #services .service-title a {
-  color: #111;
+  color: #ffffff;
 }
 
 #services .service-description {
@@ -601,10 +705,72 @@ section {
   line-height: 24px;
 }
 
-/* Subscribe Section
+/* Processes section
+--------------------------------*/
+
+#processes {
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(https://as1.ftcdn.net/v2/jpg/03/81/83/80/1000_F_381838021_bdMeJKi6hPFNVrpuTPdjW02LuUnlmf8D.jpg);
+  background-size: cover;
+  z-index: 5;
+ backdrop-filter: blur(5px);
+  padding: 80px 0 60px 0;
+  
+}
+
+#processes .process-item {
+  margin-bottom: 2px;
+}
+
+#processes .process-icon {
+  float: left;
+  background: #18d26e;
+  border-radius: 40%;
+  transition: 0.5s;
+  border: 1px solid #18d26e;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+}
+
+
+
+#processes .process-icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 2px;
+}
+
+#processes .process-item:hover .process-icon {
+  background: #fff;
+}
+
+#processes .process-item:hover .process-icon i {
+  color:#18d26e  ;
+}
+
+#processes .process-title {
+  margin-left: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+}
+
+
+#processes .process-title a {
+  color: #ffffff;
+}
+
+
+/* Subscribe Section 
 --------------------------------*/
 #subscribe {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/subscribe-bg.jpg) fixed center center;
+  background: url(https://media.istockphoto.com/id/1397353290/photo/main-microchip-on-the-motherboard.webp?b=1&s=170667a&w=0&k=20&c=MdulSuozUxyYBjXZq1R2IKTY7u430wSU15FXZ6H0tOs=);
   background-size: cover;
   padding: 80px 0;
 }
@@ -640,8 +806,8 @@ section {
 }
 
 #subscribe .subscribe-btn:hover {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
+  background: #18d26e;
+  border: 2px solid #18d26e;
 }
 
 /* Portfolio Section
@@ -672,7 +838,7 @@ section {
 
 #portfolio #portfolio-flters li:hover,
 #portfolio #portfolio-flters li.filter-active {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 #portfolio #portfolio-flters li:last-child {
@@ -720,7 +886,7 @@ section {
 
 #portfolio .portfolio-item .portfolio-info .preview-link:hover,
 #portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 #portfolio .portfolio-item .portfolio-info .details-link {
@@ -752,11 +918,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #03C4EB;
+  border: 1px solid #18d26e;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #03C4EB;
+  background-color: #18d26e;
 }
 
 .portfolio-details .portfolio-info {
@@ -858,7 +1024,9 @@ section {
 /* Team Section
 --------------------------------*/
 #team {
-  background: #fff;
+  margin: 0%;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://researchoutreach.org/wp-content/uploads/2020/05/Celso-de-Melo-Kazunori-Terada-Main-Image.jpg);
+  background-size: cover;
   padding: 80px 0 60px 0;
 }
 
@@ -897,7 +1065,7 @@ section {
 }
 
 #team .member .social a:hover {
-  color: #03C4EB;
+  color: #18d26e;
 }
 
 #team .member .social i {
@@ -918,7 +1086,7 @@ section {
 
 #contact .info i {
   font-size: 32px;
-  color: #03C4EB;
+  color: #18d26e;
   float: left;
   line-height: 0;
 }
@@ -977,11 +1145,11 @@ section {
 
 #contact .php-email-form input::focus,
 #contact .php-email-form textarea::focus {
-  background-color: #03C4EB;
+  background-color: #18d26e;
 }
 
 #contact .php-email-form button[type=submit] {
-  background: #03C4EB;
+  background: #18d26e;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -989,7 +1157,7 @@ section {
 }
 
 #contact .php-email-form button[type=submit]:hover {
-  background: #25d8fc;
+  background: #18d26e;
 }
 
 @keyframes animate-loading {
@@ -1001,6 +1169,139 @@ section {
     transform: rotate(360deg);
   }
 }
+
+/* Footer Section
+--------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.f-container {
+  max-width:1170px;
+  margin-left: 70px;
+}
+
+footer.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: rgb(35, 0, 29) ;
+  padding: 70px 0;
+}
+
+.footer-col {
+  justify-content: space-between;
+  width: 25%;
+  padding: 0 15px;  
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #18d26e;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+button {
+  margin-top: 15%;
+  padding: 10px 24px;
+  box-sizing: border-box;
+  border-radius: 70px;
+  background-color: #18d26e;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+
+
+button:hover {
+  color: black;
+  background-color: #ffffffff;
+  padding-left: 22px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffffff;
+  padding-left: 8px;
+
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: darkblue;
+  background-color: #ffffff;
+}
+ 
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+}
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
